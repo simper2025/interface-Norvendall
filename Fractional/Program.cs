@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Security.Cryptography;
 using Fractional;
 
 var list = new List<RationalNumber>
@@ -13,7 +14,7 @@ var list = new List<RationalNumber>
 RationalNumber threefifths = new RationalNumber(3, 5);
 list.Add(threefifths);
 int index = list.IndexOf(threefifths);
-Console.WriteLine($"Found ${threefifths} at index {index}");
+Console.WriteLine($"Found ${threefifths} at index {index}; size: {list.Count}");
 
 list.Sort();
 for (int i = 0; i < list.Count; i++)

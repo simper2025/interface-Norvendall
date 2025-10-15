@@ -42,13 +42,12 @@ namespace Fractional
         }
         public bool Equals(RationalNumber? other)
         {
-            if (other == null) return false;
-            if (other.ToString == base.ToString) return true;
+            if (other == this) return true;
             return false;
         }
         public int CompareTo(RationalNumber? other)
         {
-            return (int)((double)(other.numerator/other.denominator) - (double)(numerator/denominator));
+            return (int) (-(double)(other.numerator*this.denominator) + (double)(this.numerator*other.denominator));
         }
     }
 }
