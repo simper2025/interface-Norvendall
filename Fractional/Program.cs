@@ -10,8 +10,9 @@ var list = new List<RationalNumber>
     new RationalNumber(12,15),
 };
 
-var threefifths = new RationalNumber(3, 5);
-var index = list.IndexOf(threefifths);
+RationalNumber threefifths = new RationalNumber(3, 5);
+list.Add(threefifths);
+int index = list.IndexOf(threefifths);
 Console.WriteLine($"Found ${threefifths} at index {index}");
 
 list.Sort();

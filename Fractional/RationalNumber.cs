@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Fractional
 {
-    public class RationalNumber
+    public class RationalNumber : IEquatable<RationalNumber>, IComparable<RationalNumber>
     {
+
         int numerator;
         int denominator;
 
@@ -37,6 +39,16 @@ namespace Fractional
             {
                 return GreatestCommonDenominator(b, a % b);
             }
+        }
+        public bool Equals(RationalNumber? other)
+        {
+            if (other == null) return false;
+            if (other.ToString == base.ToString) return true;
+            return false;
+        }
+        public int CompareTo(RationalNumber? other)
+        {
+            return (int)((double)(other.numerator/other.denominator) - (double)(numerator/denominator));
         }
     }
 }
