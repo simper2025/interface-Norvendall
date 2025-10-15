@@ -47,7 +47,7 @@ namespace Fractional
         }
         public int CompareTo(RationalNumber? other)
         {
-            return (int) (-(double)(other.numerator*this.denominator) + (double)(this.numerator*other.denominator));
+            return this.numerator * other.denominator - other.numerator * this.denominator;
         }
     }
 }

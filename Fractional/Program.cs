@@ -14,7 +14,7 @@ var list = new List<RationalNumber>
 RationalNumber threefifths = new RationalNumber(3, 5);
 list.Add(threefifths);
 int index = list.IndexOf(threefifths);
-Console.WriteLine($"Found ${threefifths} at index {index}; size: {list.Count}");
+Console.WriteLine($"Found ${threefifths} at index {index}");
 
 list.Sort();
 for (int i = 0; i < list.Count; i++)
